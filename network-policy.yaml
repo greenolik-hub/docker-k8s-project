@@ -5,11 +5,14 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      app: backend   
+      app: backend
   policyTypes:
   - Ingress
   ingress:
   - from:
     - podSelector:
         matchLabels:
-          app: frontend   
+          app: frontend
+    ports:
+    - protocol: TCP
+      port: 5000
